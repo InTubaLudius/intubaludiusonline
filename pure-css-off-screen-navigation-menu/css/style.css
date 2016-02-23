@@ -1,0 +1,233 @@
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: lightblue;
+}
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  color: darkslategrey;
+  font-size: 1.2em;
+  transition: color 0.2s, background 0.5s;
+}
+.nav-item a:hover {
+    color: blue;
+  background: -webkit-linear-gradient(315deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /*Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Hamburger */
+@media only screen and (min-width: 720px) {
+    .nav-trigger {
+        display: none;
+    }
+    label[for="nav-trigger"] {
+        display: none;
+    }
+}
+.nav-trigger {
+    /* critical styles - hide the checkbox input */
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 40px;
+    height: 40px;
+}
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 12px; top: 9px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+.nav-trigger:checked + label {
+    left: 212px;
+}
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+    overflow-x: hidden;
+}
+*,*:before,*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body { 
+    height: 100%; 
+    width: 100% 
+}
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.font {
+    font-family: 'Open Sans', sans-serif;   
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.center {
+    margin: 0 auto;
+}
+.widthFull {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.width {
+    max-width: 1200px;
+    min-width: 700px;
+}
+.noMargin {
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
+
+.header {
+	height: 48px;
+    top: 0;
+    position: fixed;
+    background-color: white;
+}
+.headerContainer {
+    height: inherit;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+.headerContainer > img {
+    width: auto;
+    max-height: 40px;
+}
+.logo {
+    margin: 5px 5px 5px 9px;
+}
+.title {
+    width: auto;
+    height: 20px;
+    font-size: 20px;
+    margin: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #000;
+}
+
+@media only screen and (max-width: 720px) {
+    .logo, .navi, .navi ul, .navi ul li, .navi ul li a {
+        display: none;
+    }
+    .title {
+        margin: 14px 14px 14px 68px;
+    }
+}
+.navi {
+    width: auto;
+    height: 48px;
+}
+.navi ul {
+    height: inherit;
+    list-style-type: none;
+}
+.navi ul li {
+    height: inherit;
+}
+.navi ul li a {
+    width: auto;
+    display: block;
+    text-align: center;
+    height: 20px;
+    font-size: 20px;
+    margin: 14px;
+    text-decoration: none;
+    color: #666;
+}
+.navi ul li a:hover:not(.active) {
+    color: lightblue;
+}
+.navi ul li a:active {
+    background-color: lightgrey;
+}
+
+.main {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    margin: 48px 0px 0px;
+}
+.mainContainer {
+    height: inherit;
+    border: 1px solid darkslategrey;
+}
+.hero {
+    margin: 50px auto;
+}
+.hero > h1 {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    color: darkslategrey;
+    
+}
+
+.footer {
+	height: auto;
+    width: 100%;
+}
+.footerContainer {
+    background-color: lightgreen;
+    height: 100px;
+}
