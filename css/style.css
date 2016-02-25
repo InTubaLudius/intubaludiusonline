@@ -1,6 +1,20 @@
-/* Navigation Menu - Background */
+body {
+    overflow-x: hidden;
+}
+*,*:before,*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body { 
+    height: 100%; 
+    width: 100% 
+}
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
 .navigation {
-  /* critical sizing and position styles */
   width: 100%;
   height: 100%;
   position: fixed;
@@ -9,20 +23,15 @@
   bottom: 0;
   left: 0;
   z-index: 0;
-  
-  /* non-critical appearance styles */
   list-style: none;
   background: lightblue;
 }
-/* Navigation Menu - List items */
 .nav-item {
-  /* non-critical appearance styles */
   width: 200px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
 .nav-item a {
-  /* non-critical appearance styles */
   display: block;
   padding: 1em;
   color: darkslategrey;
@@ -34,10 +43,7 @@
   background: -webkit-linear-gradient(315deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
 }
-
-/* Site Wrapper - Everything that isn't navigation */
 .site-wrap {
-  /*Critical position and size styles */
   min-height: 100%;
   min-width: 100%;
   background-color: white;
@@ -47,8 +53,6 @@
   left: 0;
   z-index: 1;
 }
-
-/* Hamburger */
 @media only screen and (min-width: 720px) {
     .nav-trigger {
         display: none;
@@ -58,19 +62,15 @@
     }
 }
 .nav-trigger {
-    /* critical styles - hide the checkbox input */
     position: absolute;
     clip: rect(0, 0, 0, 0);
     width: 40px;
     height: 40px;
 }
 label[for="nav-trigger"] {
-  /* critical positioning styles */
   position: fixed;
   left: 12px; top: 9px;
   z-index: 2;
-  
-  /* non-critical apperance styles */
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -86,22 +86,6 @@ label[for="nav-trigger"] {
 .nav-trigger:checked ~ .site-wrap {
     left: 200px;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-}
-
-body {
-    overflow-x: hidden;
-}
-*,*:before,*:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html, body { 
-    height: 100%; 
-    width: 100% 
-}
-html {
-    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -221,6 +205,47 @@ a {
     text-align: center;
     color: darkslategrey;
     
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+    width: 100%;
+    box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset0 1px 2px #DDD, 0 1px 0 #FFF;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0px 0px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#contact-form button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#991D57;
+    background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
 }
 
 .footer {

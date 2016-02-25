@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/form.js"></script>
+    </head>
+    <body>
+    <ul class="navigation">
+            <li class="nav-item"><a class="font" href="about.html">About</a></li>
+            <li class="nav-item"><a class="font" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="font" href="forum.html">Forum</a></li>
+            <li class="nav-item"><a class="font" href="contact.html">Contact Us</a></li>
+        </ul>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>   
+    <div class="site-wrap">
+        <div class="header center widthFull">
+            <div class="headerContainer center width">
+                <img src="logo.png" class="logo floatLeft">
+                <a class="floatLeft font title" href="index.html">InTubaLudius Online</a>
+                <nav class="floatLeft navi">
+                    <ul class="noMargin noPadding">
+                        <li class="floatLeft"><a class="font" href="about.html">About</a></li>
+                        <li class="floatLeft"><a class="font" href="projects.html">Projects</a></li>
+                        <li class="floatLeft"><a class="font" href="forum.html">Forum</a></li>
+                        <li class="floatLeft"><a class="font" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="main center widthFull">
+            <div class="mainContainer center width">
+                <form id="contact-form" action="/" method="post">
+                    <h3>Get in touch</h3>
+                    <h4>Fill in the form below, and we'll get back to you within 24 hours.</h4>
+                <div>
+                    <label>
+                        <span>Name: (required)</span>
+                        <input id="fname" placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+                    </label>
+                    <label>
+                        <span>Name: (required)</span>
+                        <input id="lname" placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Email: (required)</span>
+                        <input id="email" placeholder="Please enter your email address" type="email" tabindex="2" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Telephone: (required)</span>
+                        <input placeholder="Please enter your number" type="tel" tabindex="3" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Website: (required)</span>
+                        <input placeholder="Begin with http://" type="url" tabindex="4" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Message: (required)</span>
+                        <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+                    </label>
+                </div>
+                <div>
+                    <button name="submit" type="submit" id="contact-submit">Send Email</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer center widthFull">
+            <div class="footerContainer center width">
+                <div class="footerSection noMargin">
+
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    </body>
+</html>
